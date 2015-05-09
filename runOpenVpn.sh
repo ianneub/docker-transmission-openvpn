@@ -16,6 +16,14 @@ else
 	exec openvpn --config /etc/openvpn/Netherlands.ovpn
 fi
 
+# override resolv.conf
+if [ "$RESOLV_OVERRIDE" != "**None**" ];
+then
+  echo "Overriding resolv.conf..."
+  printf "$RESOLV_OVERRIDE" > /etc/resolv.conf
+fi
+
+# add PIA user/pass
 if [ "$PIA_USERNAME" != "**None**" ];
 then
   echo "Setting PIA credentials..."

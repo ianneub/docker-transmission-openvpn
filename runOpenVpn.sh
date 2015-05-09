@@ -19,8 +19,8 @@ fi
 if [ "$PIA_USERNAME" != "**None**" ];
 then
   echo "Setting PIA credentials..."
-  echo $PIA_USERNAME > /pia-credentials.txt
-  echo $PIA_PASSWORD >> /pia-credentials.txt
+  echo $PIA_USERNAME > /config/pia-credentials.txt
+  echo $PIA_PASSWORD >> /config/pia-credentials.txt
 else
   echo "Not setting PIA credentials."
 fi
